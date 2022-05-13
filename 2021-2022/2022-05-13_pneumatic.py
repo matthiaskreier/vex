@@ -20,11 +20,15 @@ myVariable = 0
 
 def when_started1():
     global myVariable, vexcode_brain_precision, vexcode_console_precision
-    brain.screen.print("Start in 2 seconds\n")
+    brain.screen.print("Start in 2 seconds")
+    brain.screen.next_row()
     wait(2, SECONDS)
     digital_out_c.set(False)
-    brain.screen.print("open in 2 seconds\n")
+    brain.screen.print("Open in 2 seconds.")
+    brain.screen.next_row()
     wait(2, SECONDS)
+    brain.screen.print("Open!")
+    brain.screen.next_row()
     digital_out_c.set(True)
     wait(2, SECONDS)
     digital_out_c.set(False)
